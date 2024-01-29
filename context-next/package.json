@@ -1,0 +1,50 @@
+{
+  "name": "@uniformdev/context-next",
+  "version": "19.103.0",
+  "description": "Uniform Context Next.js integration package",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "node": "./dist/index.mjs",
+      "default": "./dist/index.esm.js"
+    },
+    "require": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "test": "jest --maxWorkers=1 --passWithNoTests",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
+    "document": "api-extractor run --local"
+  },
+  "devDependencies": {
+    "@types/cookie": "0.6.0",
+    "@types/react": "18.2.40",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "@uniformdev/context": "19.103.0",
+    "cookie": "^0.6.0"
+  },
+  "peerDependencies": {
+    "next": ">= 12.0.0",
+    "react": ">=16.13.1 || 17 || 18",
+    "react-dom": ">=16.13.1"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "ebdcac3a77d293bff272925f62f8c1c10be855bc"
+}
